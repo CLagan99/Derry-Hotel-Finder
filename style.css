@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(BackgroundImage/background.jpg);
+    background-size: 50%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .title {
+   color: #fff;
+   font-weight: 500;
+   text-decoration: none;
+   font-size: 3em;
+   font-family: 'Courier New', Courier, monospace;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #b00a0a;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    background: url(BackgroundImage/background.jpg);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+
+#text {
+    position: absolute;
+    right: 550px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 5.5vw;
+    z-index: 9;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    margin-bottom: 100px;
+    border-radius: 40px;
+    background: #fff;
+    color: #b00a0a;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+/* MAIN INFO */
+
+.info {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.info h2 {
+    font-size: 4.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.home-pic {
+    width: 650px;
+    height: 400px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: solid white 2px;
+}
+
+.home-info {
+    font-size: 1.15em;
+    color: #fff;
+    margin-top: 15px;
+}
+
+ul li {
+    font-size: 1.15em;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.about-info {
+    font-size: 1.15em;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.about-pic {
+    width: 800px;
+    height: 400px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: solid white 2px;
+}
+
+.contact-info {
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* HOTELS */
+
+.hotels {
+    width: 90%;
+    margin: auto;
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.derry-hotel {
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.derry-hotel h4 {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.derry-hotel img {
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.derry-hotel a {
+    color: #fff;
+    font-size: 1.0em;
+}
+
+.textOverImage {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.textOverImage > input {
+    display: none;
+}
+
+.textOverImage > div, .textOverImage h2 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 20px;
+    left: 4px;
+    right: 4px;
+    border-radius: 4px;
+    padding: 8px;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s;
+    color: #111;
+}
+
+.textOverImage:hover > h2, .textOverImage > input:checked + h2 + div {
+    bottom: 4px;
+    opacity: 1;
+}
+
+.textOverImage > input:checked + h2 {
+    bottom: 20px;
+    opacity: 0;
+}
+
+.textOverImage > h2 {
+    margin: 0px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textOverImage > div {
+    margin: 0px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* PRICES */
+
+table {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Poppins' sans-serif;
+    word-spacing: 10%;
+}
+
+table th {
+    text-align: left;
+    background-color: #fff;
+    color: #111;
+    padding: 4px 30px 4px 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table td {
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+}
+
+table th a {
+    color: #1c0522;
+    padding: 4px 30px 4px -18px;
+}
+
+/* CONTACT US */
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 25px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon
+{
+   min-width: 60px;
+   height: 60px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 22px;
+}
+
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+    font-size: 23px;
+}
+
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background: #1c0522 ;
+}
+
+.contactForm h2 
+{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 5px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+    .contact
+    {
+        padding: 50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contactInfo
+    {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm
+    {
+        width: 100%;
+    }
+}

@@ -470,6 +470,12 @@ table th a {
     font-size: 23px;
 }
 
+.container .contactInfo .box .text p
+{
+    font-size: 17px;
+    margin-top: -10px;
+}
+
 .contactForm
 {
     width: 40%;
